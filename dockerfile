@@ -3,7 +3,6 @@ WORKDIR /usr/src/mymaven
 COPY ./ .
 RUN mvn clean package -DskipTests 
 RUN mv /usr/src/mymaven/target/*.jar /opt/app.jar
-RUN rm -rf /usr/src/mymaven
 
 FROM openjdk:8
 WORKDIR /opt
